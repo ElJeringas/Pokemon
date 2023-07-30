@@ -1,17 +1,14 @@
 import React from 'react'
-import { BrowserRouter, NavLink } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import Pages from './pages/Pages'
 import './index.css'
-import Search from './components/Search'
+import PokeBar from './components/PokeBar'
 
 function App() {
   return (
     <div className='index'>
     <BrowserRouter>
-    <NavLink to={'/'}>
-            <h1>Pokemon</h1>
-    </NavLink>
-    <Search/>
+    <PokeBar/>
       <Pages />
     </BrowserRouter>
     </div>

@@ -1,6 +1,5 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import {React, useEffect,useState } from 'react'
-import './Pokestyle.css'
 function PokemonAll() {
 
     const [pokemons, setPokemons] = useState([]);
@@ -29,7 +28,7 @@ function PokemonAll() {
 
 
     return (
-        <div className='div'>
+        <div>
           <h3>Pokémon List</h3>
           <Grid container direction="row" justifyContent="center" alignItems="center" padding={3} spacing={3}>
             {pokemons.map((pokemon, index) => (
