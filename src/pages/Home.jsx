@@ -5,7 +5,6 @@ import Chips from '../components/Chips'
 function Home() {
   return (
     <div>
-        <Chips/>
         <PokemonAll/>
     </div>
   )

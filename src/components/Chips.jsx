@@ -2,6 +2,7 @@ import { Chip, Stack } from '@mui/material';
 import { useState, useEffect } from 'react'
 import { pink, yellow } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const ColorChip = styled(Chip)(({ theme }) => ({
     color: theme.palette.getContrastText(yellow[300]),
@@ -34,7 +35,9 @@ function Chips() {
 return (
     <Stack direction="row" spacing={1} sx={{ justifyContent:'center' ,alignItems: 'center', marginTop:'1rem' }}>
         {types.map((type) => (
-            <ColorChip key={type} label={type} variant='outlined' onClick={()=> handleClick(type)} />
+            <Link  key={type} to={{ pathname: `/pokemon/${type}`, state: { type } }} style={{ textDecoration: 'none', color: '#000' }}>
+                <ColorChip key={type} label={type} variant='outlined' onClick={()=> handleClick(type)} />
+            </Link>
         ))}
     </Stack>
 )
