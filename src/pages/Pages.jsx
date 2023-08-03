@@ -11,7 +11,7 @@ function Pages() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Searched/:search' element={<Searched/>}/>
         <Route path='/Pokemon/:id' element={<PokemonDetails/>}/>
-        <Route path='/Pokemon/:type' element={<Categories/>}/>
+        <Route path='/Pokemon/type/:type' element={<Categories/>}/>
 
     </Routes>
   )
